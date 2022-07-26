@@ -19,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     myFocusNode.addListener(() {
+      setState(() {});
       debugPrint('Has focus: ${myFocusNode.hasFocus}');
     });
   }
@@ -46,7 +47,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(color: Colors.white),
                 ),
                 DropdownButton(
-                  focusNode: myFocusNode,
                   dropdownColor: Colors.grey[900],
                   value: dropdownValue,
                   icon: const Icon(Icons.keyboard_arrow_down_rounded),
